@@ -1,0 +1,18 @@
+int max (int left, int right)
+{
+    if (left >= right)
+        return left;
+    else
+        return right;
+}
+
+/* Computes the height of binary tree with given root.  */
+int height(Node* node)
+{
+   // Your code here
+
+   if (node == NULL)
+        return 0; // considering empty tree has height 0
+
+     return max(height(node->left), height(node->right)) + 1;
+}
